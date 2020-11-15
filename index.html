@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="/jquery_chat_v1/JavaScript chat app/javascrip.js"></script> -->
+    <title>Chit Chat</title>
+
+</head>
+
+<body>
+    <h1>CHIT CHAT v1</h1>
+    <div class="msgbox1">
+        <div class="msgdisplay1">
+
+
+
+        </div>
+
+        <div class="msgwrite1">
+            <input type="text" id="rare1">
+            <button class="send" id="send11" >Send</button>
+        </div>
+    </div>
+
+    <div class="msgbox2">
+        <div class="msgdisplay1">
+
+
+
+        </div>
+        <div class="msgwrite1">
+            <input type="text" id="rare2">
+            <button class="send" id="send12 ">Send</button>
+        </div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#send11').click(function(){
+                var getel1 = document.getElementById('rare1').value
+                $('.msgdisplay1').append(getel1,'<br>')
+            })
+            $('#send12').click(function(){
+                var getel2 = document.getElementById('rare2').value
+                $('.msgdisplay1 ').append(getel2,'<br>')
+            })
+        })
+    </script>
+</body>
+
+</html>
