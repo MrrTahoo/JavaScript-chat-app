@@ -111,18 +111,32 @@
             }
             $('#send11').click(function () {
                 var getel = document.getElementById('rare1').value
+                if(getel != "")
+                {
                 $('#right1,#left2').append(getel, '<br><br>')
                 document.getElementById("rare1").value = "";
                 updateScroll1();
                 updateScroll4();
+                }
+                else
+                {
+                    alert("Please enter a message.")
+                }
                 
             })
             $('#send12').click(function () {
                 var getel = document.getElementById('rare2').value
+                if(getel != "")
+                {
                 $('#right2,#left1').append('<br>', getel, '<br>')
                 document.getElementById("rare2").value = "";
                 updateScroll2();
                 updateScroll3();
+                }
+                else
+                {
+                    alert("Please enter a message.") 
+                }
 
             })
         })
