@@ -31,7 +31,7 @@ h1{
     width: 450px;
     height: 370px;
     left: 20px;
-    top: 20px;
+    top: 25px;
 }
 .msgwrite1{
     position: absolute;
@@ -84,7 +84,7 @@ h1{
     text-align: left;
     left: 10px;
     font-size: 21px;
-
+    overflow: auto;
 }
 #left2{
     width: 210px;
@@ -93,7 +93,7 @@ h1{
     text-align: left;
     left: 10px;
     font-size: 21px;
-
+    overflow: auto;
 }
 #right1{
     width: 225px;
@@ -102,7 +102,7 @@ h1{
     left: 215px;
     text-align: right;
     font-size: 21px;
-
+    overflow: auto; 
 }
 #right2{
     width: 225px;
@@ -111,6 +111,7 @@ h1{
     left: 215px;
     text-align: right;
     font-size: 21px;
+    overflow: auto; 
 }
 #user2{
     margin-left: 325px;
@@ -118,4 +119,7 @@ h1{
 }
 #user1{
     margin-left: 240px;
+}
+::-webkit-scrollbar {
+    display: none;
 }

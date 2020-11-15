@@ -20,7 +20,7 @@
         <input type="text" placeholder="Username" id="user2"><button id="sendun2">Enter</button>
     </div>
     <div class="msgbox1">
-        <p style="text-align: center;"></p>
+        <p style="text-align: center;" id="p1"></p>
         <div class="msgdisplay1">
             <div id="left1"></div>
             <div id="right1"></div>
@@ -35,7 +35,7 @@
     </div>
 
     <div class="msgbox2">
-        <p style="text-align: center;"></p>
+        <p style="text-align: center;" id="p2"></p>
         <div class="msgdisplay1">
             <div id="left2"></div>
             <div id="right2"></div>
@@ -58,17 +58,7 @@
         crossorigin="anonymous"></script>
     <script src="jquery.js"></script>
     <script>
-        // var un1 = document.getElementById("user1").value;
-        // var un2 = document.getElementById("user2").value;
-
-        // function une() {
-        //     if (un1 == "") {
-        //         alert("Please enter a username to continue to Chat app")
-        //     }
-        //     else {
-        //         document.getElementById("send11").disabled = false;
-        //     }
-        // }
+        
         $(document).ready(function () {
             document.getElementById("send11").disabled = true;
             document.getElementById("send12").disabled = true;
@@ -81,6 +71,7 @@
                     document.getElementById("user1").disabled = true;
                     document.getElementById("sendun1").disabled = true;
                     document.getElementById("user1").value = "";
+                    $('#p2').append(un1,' is online. Say Hi!');
                 }
                 else
                 {
@@ -94,6 +85,7 @@
                     document.getElementById("user2").disabled = true;
                     document.getElementById("sendun2").disabled = true;
                     document.getElementById("user2").value = "";
+                    $('#p1').append(un2,' is online. Say Hi!');
                 }
                 else
                 {
@@ -101,15 +93,36 @@
                 }
             })
 
+            function updateScroll1(){
+                var element = document.getElementById("right1");
+                element.scrollTop = element.scrollHeight;
+            }
+            function updateScroll2(){
+                var element = document.getElementById("right2");
+                element.scrollTop = element.scrollHeight;
+            }
+            function updateScroll3(){
+                var element = document.getElementById("left1");
+                element.scrollTop = element.scrollHeight;
+            }
+            function updateScroll4(){
+                var element = document.getElementById("left2");
+                element.scrollTop = element.scrollHeight;
+            }
             $('#send11').click(function () {
                 var getel = document.getElementById('rare1').value
                 $('#right1,#left2').append(getel, '<br><br>')
                 document.getElementById("rare1").value = "";
+                updateScroll1();
+                updateScroll4();
+                
             })
             $('#send12').click(function () {
                 var getel = document.getElementById('rare2').value
                 $('#right2,#left1').append('<br>', getel, '<br>')
                 document.getElementById("rare2").value = "";
+                updateScroll2();
+                updateScroll3();
 
             })
         })
