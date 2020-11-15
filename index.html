@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="/jquery_chat_v1/JavaScript chat app/javascrip.js"></script> -->
-    <title>Chit Chat</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">    <title>Chit Chat</title>
 
 </head>
 
@@ -14,7 +15,8 @@
     <h1>CHIT CHAT v1</h1>
     <div class="msgbox1">
         <div class="msgdisplay1">
-
+            <div id="left1"></div>
+            <div id="right1"></div>
 
 
         </div>
@@ -27,13 +29,14 @@
 
     <div class="msgbox2">
         <div class="msgdisplay1">
-
+            <div id="left2"></div>
+            <div id="right2"></div>
 
 
         </div>
         <div class="msgwrite1">
             <input type="text" id="rare2">
-            <button class="send" id="send12 ">Send</button>
+            <button class="send" id="send12">Send</button>
         </div>
     </div>
 
@@ -41,12 +44,12 @@
     <script>
         $(document).ready(function(){
             $('#send11').click(function(){
-                var getel1 = document.getElementById('rare1').value
-                $('.msgdisplay1').append(getel1,'<br>')
+                var getel = document.getElementById('rare1').value
+                $('#right1,#left2').append(getel,'<br><br>')
             })
             $('#send12').click(function(){
-                var getel2 = document.getElementById('rare2').value
-                $('.msgdisplay1 ').append(getel2,'<br>')
+                var getel = document.getElementById('rare2').value
+                $('#right2,#left1').append('<br>',getel,'<br>')
             })
         })
     </script>
